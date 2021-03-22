@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZfC7Z9GspGhpfP_LgIP76ztvHzPnueKO_uKXMfLpJpEWR-5QQ3mUuPZ07DVwyoLQqryUlUG9RHDU6AJ8z7g:https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-keto-pizza-073-1544039876.jpg&usqp=CAU"></image>
+  <h2> Choose your pizza toppings: </h2>
+  <div>
+    <span>
+      <input type="checkbox" title="olives" id="olives" onclick="addOlives()">
+      Olives &nbsp &nbsp
+    </span>
+    <span>
+      <input type="checkbox" title="mushrooms" id="mushrooms" onclick="addMushrooms()">
+      Mushrooms &nbsp &nbsp
+    </span>
+    <span>
+      <input type="checkbox" title="pineapples" id="pineapples" onclick="addPineapples()">
+      Pineapples &nbsp &nbsp
+    </span>
+    <span>
+      <input type="checkbox" title="peppers" id="peppers" onclick="addPeppers()">
+      Peppers &nbsp &nbsp
+    </span>
+    <span>
+      <input type="checkbox" title="spinach" id="spinach" onclick="addSpinach()">
+      Spinach &nbsp &nbsp
+    </span>
+    <span>
+      <input type="checkbox" title="eggplant" id="eggplant" onclick="addEggplant()">
+      Eggplant &nbsp &nbsp
+    </span>
+    <br>
+    <br>
+
+    <button onclick="addTop()"> Click if you confirm your toppings </button>
+    <p id="toppings">
+      Your selection is
+    </p>
+    <ul id="confirmation">
+
+    </ul>
+
+  </div>
+</body>
+
+</html>
