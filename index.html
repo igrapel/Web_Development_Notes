@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="myScripts.js"></script>
+</head>
+<body>
+    <h1>Subject Selection Questionnaire</h1>
+    <h2>Do you want to take computer science next year? </h2>
+    <select name="cs" id="csInput" onchange="cs()">
+        <option value="0">Choose</option>
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+    </select>
+    
+    <p id="cs_answer"></p>
+
+    <h2>What is your GPA?</h2>
+    <input type="text" id="gpaInput" onchange = "gpa()">
+    <p id="gpa_answer"></p>
+
+    <h2> What grade will you be in next year? </h2>
+    <select name="grade" id="gradeInput" onchange = "selectGrade()">
+        <option value="0">Choose</option>
+        <option value="9">Freshman</option>
+        <option value="10">Sophmomore</option>
+        <option value="11">Junior</option>
+        <option value="12">Senior</option>
+    </select>
+    <p id="recommendedCS"></p>
+
+</body>
+</html>
