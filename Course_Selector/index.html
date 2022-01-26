@@ -24,7 +24,7 @@
     <p id="gpa_answer"></p>
 
     <h2> What grade will you be in next year? </h2>
-    <select name="grade" id="gradeInput" onchange = "yourGrade()">
+    <select name="grade" id="gradeInput" onchange = "selectGrade()">
         <option value="0">Choose</option>
         <option value="9">Freshman</option>
         <option value="10">Sophmomore</option>
@@ -32,6 +32,17 @@
         <option value="12">Senior</option>
     </select>
     <p id="recommendedCS"></p>
+
+    <h2> What CS are you interested in? </h2>
+    <select name="csField" id="csFieldInput" onchange = "csField()">
+        <option value="0">Choose</option>
+        <option value="1">UX (User Experience</option>
+        <option value="2">Backend (Database management) </option>
+        <option value="3">Artificial Intelligence</option>
+        <option value="4">App Development</option>
+        <option value="5">Cybersecurity</option>
+    </select>
+    <p id="recommendedFocus"></p>
 
 </body>
 </html>

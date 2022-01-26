@@ -1,6 +1,7 @@
 var nextYear;
 var theGPA;
 var yourGrade;
+var csFieldOutput;
 
 function cs()
 {
@@ -42,9 +43,11 @@ function gpa()
     }
 }
 
-function yourGrade()
+function selectGrade()
 {
     yourGrade = document.getElementById("gradeInput").value;
+    theGPA = document.getElementById("gpaInput").value;
+    theGPA = parseFloat(theGPA);
     console.log(yourGrade);
     console.log(theGPA);
     if(theGPA >= 3.5 && yourGrade == 12)
@@ -67,7 +70,7 @@ function yourGrade()
             document.getElementById("recommendedCS").innerHTML = "Why are you wasting your life.";
         }
     }
-    else if((theGPA<2.5 && theGPA < 3.5) && (yourGrade == 10 || yourGrade == 11 || yourGrade == 12))
+    else if((theGPA>2.5 && theGPA < 3.5) && (yourGrade == 10 || yourGrade == 11 || yourGrade == 12))
     {
         if(nextYear == 1)
         {
@@ -77,7 +80,40 @@ function yourGrade()
             document.getElementById("recommendedCS").innerHTML = "Why are you wasting your life.";
         }
     } 
+    else if(yourGrade == 9)
+    {
+        document.getElementById("recommendedCS").innerHTML = "Consider Foundations of Coding";
+    }
     else{
         document.getElementById("recommendedCS").innerHTML = "Maybe you will be good at film studies.";
     }
+}
+
+function csField()
+{
+    var csFieldInput;
+    csFieldInput = document.getElementById("csFieldInput").value;
+    console.log(typeof csFieldInput);
+    csFieldInput = parseInt(csFieldInput);
+    switch(csFieldInput){
+        case 0: 
+            csFieldOutput = "Choose Something";
+            break;
+        case 1: 
+            csFieldOutput = "Focus on HTML and CSS Frameworks";
+            break;
+        case 2: 
+            csFieldOutput = "Focus on Java frameworks and SQL";
+            break;
+        case 3: 
+            csFieldOutput = "Focus on Python and develop strong mathematical skills";
+            break;
+        case 4: 
+            csFieldOutput = "Focus on Java or Swift";
+            break;
+        case 5: 
+            csFieldOutput = "Focus on lower level languages like C";
+            break;
+    }
+    document.getElementById("recommendedFocus").innerHTML = "You should " + csFieldOutput;
 }
