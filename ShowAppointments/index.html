@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="myScripts.js"></script>
+</head>
+<body>
+    <h1> When to show up for physical therapy?   </h1>
+
+    <h2>First Day of Therapy in February:</h2>
+    <input type="text" id="start">
+
+    <h2>Last Day of Therapy in February:</h2>
+    <input type="text" id="end">
+    <br>
+    <br>
+    <button onclick="appointmentDays()">Print appointment dates</button>
+
+    <p id="febDays">  </p>
+  <!--Check for march -->
+    <h2>First Day of Therapy in March:</h2>
+    <input type="text" id="startMarch">
+    
+    <h2>Last Day of Therapy in March:</h2>
+    <input type="text" id="endMarch">
+
+   
+
+    <h2>How many days in between Therapy:</h2>
+    <input type="text" id="jump">
+    <br>
+    <br>
+    <button onclick="marchDays()">Print appointment dates</button>
+
+</body>
+</html>

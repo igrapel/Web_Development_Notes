@@ -1,7 +1,17 @@
+"use strict";
 var nextYear;
 var theGPA;
 var yourGrade;
 var csFieldOutput;
+
+function check()
+{
+    var pw = prompt("What is your school ID? ");
+    if(pw != "1234" && pw !="asdf" && pw != "password")
+    {
+        location.replace("https://coralgablescavaliers.org/");
+    }
+}
 
 function cs()
 {
@@ -91,29 +101,12 @@ function selectGrade()
 
 function csField()
 {
-    var csFieldInput;
-    csFieldInput = document.getElementById("csFieldInput").value;
-    console.log(typeof csFieldInput);
-    csFieldInput = parseInt(csFieldInput);
-    switch(csFieldInput){
-        case 0: 
-            csFieldOutput = "Choose Something";
-            break;
-        case 1: 
-            csFieldOutput = "Focus on HTML and CSS Frameworks";
-            break;
-        case 2: 
-            csFieldOutput = "Focus on Java frameworks and SQL";
-            break;
-        case 3: 
-            csFieldOutput = "Focus on Python and develop strong mathematical skills";
-            break;
-        case 4: 
-            csFieldOutput = "Focus on Java or Swift";
-            break;
-        case 5: 
-            csFieldOutput = "Focus on lower level languages like C";
-            break;
-    }
-    document.getElementById("recommendedFocus").innerHTML = "You should " + csFieldOutput;
+    var csFieldInput = document.getElementById("csFieldInput").value;
+    
+    console.log("The Field: " + csFieldInput);
+    console.log("Input data type: " + (typeof csFieldInput));
+
+    
+
+
 }
