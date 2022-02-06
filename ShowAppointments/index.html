@@ -5,22 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="myScripts.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+  <div class="container-fluid">
+    <div class="col-sm-12 jumbotron jumbotron-fluid page-header">   
     <h1> When to show up for physical therapy?   </h1>
+    </div>
 
+
+    <div class="col-sm-4 borders" id="feb">  
     <h2>First Day of Therapy in February:</h2>
     <input type="text" id="start">
-
+    <br>
+    <br>
+    <br>
     <h2>Last Day of Therapy in February:</h2>
     <input type="text" id="end">
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <button onclick="appointmentDays()">Print appointment dates</button>
 
     <p id="febDays">  </p>
+
+  </div>
+
+  <div class="col-sm-4 borders" id="march">
   <!--Check for march -->
     <h2>First Day of Therapy in March:</h2>
     <input type="text" id="startMarch">
@@ -34,7 +53,27 @@
     <input type="text" id="jump">
     <br>
     <br>
-    <button onclick="marchDays()">Print appointment dates</button>
+    <button onclick="marchDays();">Print appointment dates</button>
 
+    <p id="marchDays"></p>
+  </div>
+
+  <div class="col-sm-4 borders" id="april">
+    <!--Check for Apr;il -->
+    <h2>Starting in April, how many sessions do you want? :</h2>
+    <input type="text" id="numSessions">
+
+    
+    <h2>Which date to start?</h2>
+    <input type="text" id="startApril">
+
+    <h2>Days in between?</h2>
+    <input type="text" id="daysBetween">
+    <br>
+    <br>
+    <button onclick="aprilDays();">Print appointment dates</button>
+  <p id="aprilResults">  </p>
+</div>
+</div>
 </body>
 </html>
