@@ -1,0 +1,13 @@
+
+#form{
+    border: 3px groove;
+    padding: 25px;
+    border-radius: 3px;
+    border-color:dimgray;
+    width: 50%;
+    background-color:lightslategrey;
+}
+
+body{
+    background-color:steelblue;
+}
