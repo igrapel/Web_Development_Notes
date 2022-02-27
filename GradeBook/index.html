@@ -22,7 +22,12 @@
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR916VAZMlki19ihC8Oj3lYkG_RwXys6Hx_Dg&usqp=CAU" alt="cghs">
 </span> 
       <hr>
-    <button class="btn btn-secondary btn-lg" onclick="showGrades()">Show Grades</button>
+    
+    <div class="p-4 bg-dark">
+        <button class="btn btn-secondary btn-lg" onclick="showGrades(false)">Show Grades</button>
+        <button class="btn btn-secondary btn-lg" onclick="showGrades(true)">Show Sorted Grades</button>
+        <button class="btn btn-secondary btn-lg" onclick="selectGrade()">Which grade to see</button><input type="text" id="gradeNum">
+    </div>
     <p id="showGrades" class="display-2 bg-info text-white">  </p>
     <button type="button" class="btn btn-info" onclick="showGpa()">Get GPA</button>
     <p id="gpa" class="display-2 bg-info text-white">  </p>

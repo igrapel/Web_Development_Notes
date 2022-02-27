@@ -1,4 +1,5 @@
 var grades = []
+var sortedGrades = [];
 function addGrades()
 {
     var grade = 0;
@@ -13,7 +14,7 @@ function addGrades()
 
     //shallow copy
 
-    var sortedGrades = [];
+   
     for(var i = 0; i < grades.length; i++)
     {
         sortedGrades[i] = grades[i];
@@ -21,9 +22,17 @@ function addGrades()
     console.log(sortedGrades.sort().toString());
 }
 
-function showGrades()
+function showGrades(toSort)
 {
-    document.getElementById("showGrades").innerHTML = grades.toString();
+    if(toSort)
+    {
+        document.getElementById("showGrades").innerHTML = sortedGrades.toString();
+    }
+    else
+    {
+        document.getElementById("showGrades").innerHTML = grades.toString();
+    }
+   
 }
 
 
@@ -43,4 +52,12 @@ function calcAverage(removed = false)
         console.log("sum " + sum);
     }
     return sum / grades.length;
+}
+
+
+function selectGrade()
+{
+    var index = document.getElementById("gradeNum").value;
+    document.getElementById("showGrades").innerHTML = "Grade: " + index + " - " + grades[index];
+
 }
