@@ -19,7 +19,7 @@
     <br>
     <br>
     <span class="border border-primary">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR916VAZMlki19ihC8Oj3lYkG_RwXys6Hx_Dg&usqp=CAU" alt="cghs">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR916VAZMlki19ihC8Oj3lYkG_RwXys6Hx_Dg&usqp=CAU" alt="cghs"   onmouseover="bigImg(this)" onmouseout="normalImg(this)">
 </span> 
       <hr>
     
@@ -29,7 +29,8 @@
         <button class="btn btn-secondary btn-lg" onclick="selectGrade()">Which grade to see</button><input type="text" id="gradeNum">
     </div>
     <p id="showGrades" class="display-2 bg-info text-white">  </p>
-    <button type="button" class="btn btn-info" onclick="showGpa()">Get GPA</button>
+    <button type="button" class="btn btn-info" onclick="showGpa(false)">Get GPA</button>
+    <button type="button" class="btn btn-info" onclick="showGpa(true)">Remove Worst Score</button>
     <p id="gpa" class="display-2 bg-info text-white">  </p>
     </div>
 

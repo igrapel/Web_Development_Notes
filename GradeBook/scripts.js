@@ -19,6 +19,7 @@ function addGrades()
     {
         sortedGrades[i] = grades[i];
     }
+    //sortedGrades.reverse();
     console.log(sortedGrades.sort().toString());
 }
 
@@ -46,6 +47,16 @@ function calcAverage(removed = false)
 {
     var sum = 0;
     console.log(grades.length);
+    if(true)
+    {
+        sortedGrades.shift();
+        for (let i = 0; i < sortedGrades.length; i++)
+        {
+            sum += sortedGrades[i];
+            console.log("sum " + sum);
+        }
+        return sum / sortedGrades.length;
+    }
     for (let i = 0; i < grades.length; i++)
     {
         sum += grades[i];
@@ -61,3 +72,13 @@ function selectGrade()
     document.getElementById("showGrades").innerHTML = "Grade: " + index + " - " + grades[index];
 
 }
+
+function bigImg(x) {
+    x.style.height = "450px0px";
+    x.style.width = "450px";
+  }
+
+  function normalImg(x) {
+    x.style.height = "300px";
+    x.style.width = "300px";
+  }
