@@ -1,6 +1,6 @@
 var toppings = ["Tomato Sauce", "Vegan Cheese"];
 
-function addTop() {
+function confirmPick() {
   var ul = document.getElementById("confirmation");
   for(var i = 0; i < toppings.length; i++)
   {
@@ -21,11 +21,13 @@ function addTopping(selection)
       {
       toppings.push("Olives");
       }
+      break;
     case "Mushrooms":
       if(toppings.indexOf("Mushrooms") == -1) 
       {
       toppings.push("Mushrooms");
       }
+      break;
     case "Pineapples":
       if(toppings.indexOf("Pineapples") == -1) 
       {
@@ -58,7 +60,7 @@ function alpha() {
 }
 
 
-
+/**  
 function addSpinach() {
   if (toppings.indexOf("Spinach") == -1) {
     toppings.push("Spinach");
@@ -66,3 +68,4 @@ function addSpinach() {
     toppings.splice(toppings.indexOf("Spinach", 1));
   }
 }
+*/
