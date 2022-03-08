@@ -13,6 +13,42 @@ function addTop() {
   //document.getElementById("toppings").innerHTML = toppings;
 }
 
+function addTopping(selection)
+{
+  switch(selection){
+    case "Olives":
+      if(toppings.indexOf("Olives") == -1) 
+      {
+      toppings.push("Olives");
+      }
+    case "Mushrooms":
+      if(toppings.indexOf("Mushrooms") == -1) 
+      {
+      toppings.push("Mushrooms");
+      }
+    case "Pineapples":
+      if(toppings.indexOf("Pineapples") == -1) 
+      {
+      toppings.push("Pineapples");
+      }
+    case "Peppers":
+      if(toppings.indexOf("Peppers") == -1) 
+      {
+      toppings.push("Peppers");
+      }
+    case "Eggplant":
+      if(toppings.indexOf("Eggplant") == -1) 
+      {
+      toppings.push("Eggplant");
+      }
+    case "Spinach":
+      if(toppings.indexOf("Spinach") == -1) 
+      {
+      toppings.push("Spinach");
+      }
+  }
+}
+
 function removeLast() {
   toppings.pop();
 }
@@ -21,45 +57,7 @@ function alpha() {
   toppings.sort();
 }
 
-function addOlives() {
-  if (toppings.indexOf("Olives") == -1) {
-    toppings.unshift("Olives");
-  } else {
-    toppings.splice(toppings.indexOf("Olives", 1));
-  }
-}
 
-function addMushrooms() {
-  if (toppings.indexOf("Mushrooms") == -1) {
-    toppings.push("Mushrooms");
-  } else {
-    toppings.splice(toppings.indexOf("Mushrooms"), 1);
-  }
-}
-
-function addPineapples() {
-  if (toppings.indexOf("Pineapples") == -1) {
-    toppings.push("Pineapples");
-  } else {
-    toppings.splice(toppings.indexOf("Pineapples", 1));
-  }
-}
-
-function addPeppers() {
-  if (toppings.indexOf("Peppers") == -1) {
-    toppings.push("Peppers");
-  } else {
-    toppings.splice(toppings.indexOf("Peppers", 1));
-  }
-}
-
-function addEggplant() {
-  if (toppings.indexOf("Eggplant") == -1) {
-    toppings.push("Eggplant");
-  } else {
-    toppings.splice(toppings.indexOf("Eggplant", 1));
-  }
-}
 
 function addSpinach() {
   if (toppings.indexOf("Spinach") == -1) {
