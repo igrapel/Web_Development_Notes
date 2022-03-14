@@ -1,4 +1,7 @@
+
+   
 var toppings = ["Tomato Sauce", "Vegan Cheese"];
+var myWindow;
 
 function confirmPick() {
   var ul = document.getElementById("confirmation");
@@ -11,7 +14,24 @@ function confirmPick() {
   }
 
   //document.getElementById("toppings").innerHTML = toppings;
+myWindow = window.open("", "Thanks.", "width=300,height=300");
+myWindow.document.write("<p>Thank you for the order</p> <p> Enjoy our pizza with: </p> " + toppings);
+
+let btn = document.createElement("button");
+btn.innerHTML = "Close";
+btn.type = "submit";
+btn.name = "formBtn";
+btn.id = "toClose";
+btn.onclick = function ()
+{
+  myWindow.close();
+  console.log("here");
 }
+document.body.appendChild(btn);
+
+}
+
+
 
 function addTopping(selection)
 {
@@ -33,22 +53,28 @@ function addTopping(selection)
       {
       toppings.push("Pineapples");
       }
+      break;
     case "Peppers":
       if(toppings.indexOf("Peppers") == -1) 
       {
       toppings.push("Peppers");
       }
+      break;
     case "Eggplant":
       if(toppings.indexOf("Eggplant") == -1) 
       {
       toppings.push("Eggplant");
       }
+      break;
     case "Spinach":
       if(toppings.indexOf("Spinach") == -1) 
       {
       toppings.push("Spinach");
       }
+      break;
   }
+  
+
 }
 
 function removeLast() {
@@ -58,14 +84,3 @@ function removeLast() {
 function alpha() {
   toppings.sort();
 }
-
-
-/**  
-function addSpinach() {
-  if (toppings.indexOf("Spinach") == -1) {
-    toppings.push("Spinach");
-  } else {
-    toppings.splice(toppings.indexOf("Spinach", 1));
-  }
-}
-*/
